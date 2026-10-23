@@ -1,0 +1,25 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: paper
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      POSTGRES_DB: paper
+    volumes: ["postgres:/var/lib/postgresql/data"]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U paper -d paper]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  app:
+    build: .
+    ports: ["127.0.0.1:18100:18100"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://paper:${POSTGRES_PASSWORD}@db/paper
+      DATA_DIR: /app/data
+    volumes: ["files:/app/data"]
+    depends_on:
+      db: {condition: service_healthy}
+volumes:
+  postgres:
+  files:

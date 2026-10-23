@@ -1,0 +1,422 @@
+{
+  "dataset": "10 hand-authored synthetic questions; 2 synthetic PDFs; not a real-paper benchmark",
+  "health": {
+    "status": "ok",
+    "embedding_model": "e5-onnx-int8-v1",
+    "vector_store": "postgresql",
+    "llm_configured": true,
+    "model": "qwen2.5:1.5b-instruct",
+    "limits": {
+      "upload_mb": 25,
+      "pages": 80
+    },
+    "scope": "单用户私有演示，扫描 PDF 不支持 OCR"
+  },
+  "paper_ids": {
+    "cedar": "a6557db3db88441fa165e5271540723f",
+    "maple": "586324f98bf24cbdafe5d7ced8a274b8"
+  },
+  "reports": [
+    {
+      "mode": "keyword",
+      "recall_at_5": 1.0,
+      "abstention_accuracy": 1.0,
+      "citation_location_check_rate": 1.0,
+      "queries_with_citations": 8,
+      "total_citations": 15,
+      "duration_ms": 175,
+      "cases": [
+        {
+          "paper": "cedar",
+          "question": "Which dataset was used?",
+          "page": 1,
+          "contains": "CedarQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 1
+        },
+        {
+          "paper": "cedar",
+          "question": "论文使用了哪些数据集？",
+          "page": 1,
+          "contains": "CedarQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 3
+        },
+        {
+          "paper": "cedar",
+          "question": "What is the exact-match accuracy?",
+          "page": 1,
+          "contains": "82.4",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 6,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "What happens in the reranker ablation?",
+          "page": 2,
+          "contains": "76.1",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 6,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "What are the limitations?",
+          "page": 2,
+          "contains": "English",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 6,
+          "citations": 2
+        },
+        {
+          "paper": "maple",
+          "question": "Which dataset was used?",
+          "page": 1,
+          "contains": "MapleQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 7,
+          "citations": 2
+        },
+        {
+          "paper": "maple",
+          "question": "What metric is reported?",
+          "page": 1,
+          "contains": "macro F1",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 1
+        },
+        {
+          "paper": "maple",
+          "question": "What changes in the contrastive ablation?",
+          "page": 2,
+          "contains": "0.69",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 3,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "火星地震震级具体数值是多少？",
+          "abstain": true,
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "no_evidence",
+          "duration_ms": 5,
+          "citations": 0
+        },
+        {
+          "paper": "maple",
+          "question": "What is the zebrafish lifespan?",
+          "abstain": true,
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "no_evidence",
+          "duration_ms": 5,
+          "citations": 0
+        }
+      ]
+    },
+    {
+      "mode": "vector",
+      "recall_at_5": 1.0,
+      "abstention_accuracy": 1.0,
+      "citation_location_check_rate": 1.0,
+      "queries_with_citations": 8,
+      "total_citations": 15,
+      "duration_ms": 664,
+      "cases": [
+        {
+          "paper": "cedar",
+          "question": "Which dataset was used?",
+          "page": 1,
+          "contains": "CedarQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 564,
+          "citations": 1
+        },
+        {
+          "paper": "cedar",
+          "question": "论文使用了哪些数据集？",
+          "page": 1,
+          "contains": "CedarQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 5,
+          "citations": 3
+        },
+        {
+          "paper": "cedar",
+          "question": "What is the exact-match accuracy?",
+          "page": 1,
+          "contains": "82.4",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "What happens in the reranker ablation?",
+          "page": 2,
+          "contains": "76.1",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "What are the limitations?",
+          "page": 2,
+          "contains": "English",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "maple",
+          "question": "Which dataset was used?",
+          "page": 1,
+          "contains": "MapleQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "maple",
+          "question": "What metric is reported?",
+          "page": 1,
+          "contains": "macro F1",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 1
+        },
+        {
+          "paper": "maple",
+          "question": "What changes in the contrastive ablation?",
+          "page": 2,
+          "contains": "0.69",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "火星地震震级具体数值是多少？",
+          "abstain": true,
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "no_evidence",
+          "duration_ms": 4,
+          "citations": 0
+        },
+        {
+          "paper": "maple",
+          "question": "What is the zebrafish lifespan?",
+          "abstain": true,
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "no_evidence",
+          "duration_ms": 4,
+          "citations": 0
+        }
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "recall_at_5": 1.0,
+      "abstention_accuracy": 1.0,
+      "citation_location_check_rate": 1.0,
+      "queries_with_citations": 8,
+      "total_citations": 15,
+      "duration_ms": 83,
+      "cases": [
+        {
+          "paper": "cedar",
+          "question": "Which dataset was used?",
+          "page": 1,
+          "contains": "CedarQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 1
+        },
+        {
+          "paper": "cedar",
+          "question": "论文使用了哪些数据集？",
+          "page": 1,
+          "contains": "CedarQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 3
+        },
+        {
+          "paper": "cedar",
+          "question": "What is the exact-match accuracy?",
+          "page": 1,
+          "contains": "82.4",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "What happens in the reranker ablation?",
+          "page": 2,
+          "contains": "76.1",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "What are the limitations?",
+          "page": 2,
+          "contains": "English",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "maple",
+          "question": "Which dataset was used?",
+          "page": 1,
+          "contains": "MapleQA",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "maple",
+          "question": "What metric is reported?",
+          "page": 1,
+          "contains": "macro F1",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 1
+        },
+        {
+          "paper": "maple",
+          "question": "What changes in the contrastive ablation?",
+          "page": 2,
+          "contains": "0.69",
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "answered",
+          "duration_ms": 4,
+          "citations": 2
+        },
+        {
+          "paper": "cedar",
+          "question": "火星地震震级具体数值是多少？",
+          "abstain": true,
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "no_evidence",
+          "duration_ms": 4,
+          "citations": 0
+        },
+        {
+          "paper": "maple",
+          "question": "What is the zebrafish lifespan?",
+          "abstain": true,
+          "retrieval_or_abstention_ok": true,
+          "citation_location_ok": true,
+          "status": "no_evidence",
+          "duration_ms": 4,
+          "citations": 0
+        }
+      ]
+    }
+  ],
+  "comparison_rows": 2,
+  "model_probe": {
+    "status": "answered",
+    "source": "local_model",
+    "citations": [
+      {
+        "chunk_id": "12f336cb08704cd0b133160e78a3a18f",
+        "paper_id": "a6557db3db88441fa165e5271540723f",
+        "page": 1,
+        "section": "3 Datasets",
+        "quote": "We evaluate on the fictional CedarQA dataset,\ncontaining 2400 training questions and 600 test\nquestions.",
+        "bbox": [
+          330.0,
+          117.25,
+          539.5700073242188,
+          160.99000549316406
+        ],
+        "page_url": "/api/papers/a6557db3db88441fa165e5271540723f/pages/1.png?chunk_id=12f336cb08704cd0b133160e78a3a18f",
+        "pdf_url": "/api/papers/a6557db3db88441fa165e5271540723f/file#page=1"
+      }
+    ],
+    "message": "本地模型选取原文证据，引用已通过文本及来源校验。内容是否充分回答问题仍需人工核对。",
+    "hits": [
+      {
+        "chunk_id": "12f336cb08704cd0b133160e78a3a18f",
+        "paper_id": "a6557db3db88441fa165e5271540723f",
+        "page": 1,
+        "section": "3 Datasets",
+        "bbox": [
+          330.0,
+          117.25,
+          539.5700073242188,
+          160.99000549316406
+        ],
+        "text": "We evaluate on the fictional CedarQA dataset,\ncontaining 2400 training questions and 600 test\nquestions.",
+        "score": 0.032787,
+        "keyword_score": 1.9844
+      }
+    ],
+    "embedding_model": "e5-onnx-int8-v1",
+    "duration_ms": 1202,
+    "query_id": "80f60789dc6e4281b907112655b8c4bf"
+  },
+  "limits": "Quote substring and location checks do not measure entailment or completeness. No latency distribution or semantic accuracy claim."
+}

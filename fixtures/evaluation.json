@@ -1,0 +1,12 @@
+[
+  {"paper":"cedar","question":"Which dataset was used?","page":1,"contains":"CedarQA"},
+  {"paper":"cedar","question":"论文使用了哪些数据集？","page":1,"contains":"CedarQA"},
+  {"paper":"cedar","question":"What is the exact-match accuracy?","page":1,"contains":"82.4"},
+  {"paper":"cedar","question":"What happens in the reranker ablation?","page":2,"contains":"76.1"},
+  {"paper":"cedar","question":"What are the limitations?","page":2,"contains":"English"},
+  {"paper":"maple","question":"Which dataset was used?","page":1,"contains":"MapleQA"},
+  {"paper":"maple","question":"What metric is reported?","page":1,"contains":"macro F1"},
+  {"paper":"maple","question":"What changes in the contrastive ablation?","page":2,"contains":"0.69"},
+  {"paper":"cedar","question":"火星地震震级具体数值是多少？","abstain":true},
+  {"paper":"maple","question":"What is the zebrafish lifespan?","abstain":true}
+]

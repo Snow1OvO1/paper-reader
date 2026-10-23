@@ -1,0 +1,174 @@
+{
+  "source": "https://arxiv.org/abs/1706.03762",
+  "paper": {
+    "id": "f28c862a6c5849aeb0391a7eae90f0d0",
+    "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+    "title": "Attention Is All You Need",
+    "pages": 15,
+    "created": "2026-09-24T02:31:38.446360+00:00",
+    "warnings": [
+      "第 1 页使用双栏启发式排序，请核对复杂跨栏内容。",
+      "第 4 页使用双栏启发式排序，请核对复杂跨栏内容。",
+      "第 5 页使用双栏启发式排序，请核对复杂跨栏内容。",
+      "第 8 页使用双栏启发式排序，请核对复杂跨栏内容。",
+      "第 13 页使用双栏启发式排序，请核对复杂跨栏内容。",
+      "第 14 页使用双栏启发式排序，请核对复杂跨栏内容。",
+      "第 15 页使用双栏启发式排序，请核对复杂跨栏内容。"
+    ],
+    "embedding_model": "e5-onnx-int8-v1",
+    "chunks": 539,
+    "deduplicated": false
+  },
+  "results": [
+    {
+      "question": "Which training dataset was used for English-German translation?",
+      "answer": {
+        "status": "answered",
+        "source": "local_model",
+        "citations": [
+          {
+            "chunk_id": "503d3f03902b47f59983c1e8685edf2f",
+            "paper_id": "f28c862a6c5849aeb0391a7eae90f0d0",
+            "page": 7,
+            "section": "5.1 Training Data and Batching",
+            "quote": "We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million\nsentence pairs.",
+            "bbox": [
+              107.53199768066406,
+              373.64630126953125,
+              505.654541015625,
+              449.1390686035156
+            ],
+            "page_url": "/api/papers/f28c862a6c5849aeb0391a7eae90f0d0/pages/7.png?chunk_id=503d3f03902b47f59983c1e8685edf2f",
+            "pdf_url": "/api/papers/f28c862a6c5849aeb0391a7eae90f0d0/file#page=7"
+          }
+        ],
+        "message": "本地模型选取原文证据，引用已通过文本及来源校验。内容是否充分回答问题仍需人工核对。",
+        "hits": [
+          {
+            "chunk_id": "503d3f03902b47f59983c1e8685edf2f",
+            "paper_id": "f28c862a6c5849aeb0391a7eae90f0d0",
+            "page": 7,
+            "section": "5.1 Training Data and Batching",
+            "bbox": [
+              107.53199768066406,
+              373.64630126953125,
+              505.654541015625,
+              449.1390686035156
+            ],
+            "text": "We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million\nsentence pairs. Sentences were encoded using byte-pair encoding [3], which has a shared source-\ntarget vocabulary of about 37000 tokens. For English-French, we used the significantly larger WMT\n2014 English-French dataset consisting of 36M sentences and split tokens into a 32000 word-piece\nvocabulary [38]. Sentence pairs were batched together by approximate sequence length. Each training\nbatch contained a set of sentence pairs containing approximately 25000 source tokens and 25000\ntarget tokens.",
+            "score": 0.032522,
+            "keyword_score": 6.3602
+          },
+          {
+            "chunk_id": "f17e280dfb10444f9b317652ee96d220",
+            "paper_id": "f28c862a6c5849aeb0391a7eae90f0d0",
+            "page": 8,
+            "section": "6.1 Machine Translation",
+            "bbox": [
+              107.69100189208984,
+              598.3764038085938,
+              503.99761962890625,
+              640.9900512695312
+            ],
+            "text": "Table 2 summarizes our results and compares our translation quality and training costs to other model\narchitectures from the literature. We estimate the number of floating point operations used to train a\nmodel by multiplying the training time, the number of GPUs used, and an estimate of the sustained\nsingle-precision floating-point capacity of each GPU 5.",
+            "score": 0.030536,
+            "keyword_score": 4.9198
+          },
+          {
+            "chunk_id": "02bd5cac6dce44a3b485896021b4833b",
+            "paper_id": "f28c862a6c5849aeb0391a7eae90f0d0",
+            "page": 8,
+            "section": "6.1 Machine Translation",
+            "bbox": [
+              108.0,
+              418.3014221191406,
+              504.6652526855469,
+              482.73406982421875
+            ],
+            "text": "On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big)\nin Table 2) outperforms the best previously reported models (including ensembles) by more than 2.0\nBLEU, establishing a new state-of-the-art BLEU score of 28.4. The configuration of this model is\nlisted in the bottom line of Table 3. Training took 3.5 days on 8 P100 GPUs. Even our base model\nsurpasses all previously published models and ensembles, at a fraction of the training cost of any of\nthe competitive models.",
+            "score": 0.029911,
+            "keyword_score": 3.6159
+          },
+          {
+            "chunk_id": "74c614218052497cbc87d967b1b78fa7",
+            "paper_id": "f28c862a6c5849aeb0391a7eae90f0d0",
+            "page": 8,
+            "section": "6.1 Machine Translation",
+            "bbox": [
+              108.0,
+              488.9289245605469,
+              505.2453308105469,
+              533.113525390625
+            ],
+            "text": "On the WMT 2014 English-to-French translation task, our big model achieves a BLEU score of 41.0,\noutperforming all of the previously published single models, at less than 1/4 the training cost of the\nprevious state-of-the-art model. The Transformer (big) model trained for English-to-French used\ndropout rate Pdrop = 0.1, instead of 0.3.",
+            "score": 0.029412,
+            "keyword_score": 3.8434
+          },
+          {
+            "chunk_id": "66b1715c503d4106a25f3f8276bb1ddd",
+            "paper_id": "f28c862a6c5849aeb0391a7eae90f0d0",
+            "page": 1,
+            "section": "Abstract",
+            "bbox": [
+              143.5570068359375,
+              413.33428955078125,
+              469.78717041015625,
+              576.0990600585938
+            ],
+            "text": "The dominant sequence transduction models are based on complex recurrent or\nconvolutional neural networks that include an encoder and a decoder. The best\nperforming models also connect the encoder and decoder through an attention\nmechanism. We propose a new simple network architecture, the Transformer,\nbased solely on attention mechanisms, dispensing with recurrence and convolutions\nentirely. Experiments on two machine translation tasks show these models to\nbe superior in quality while being more parallelizable and requiring significantly\nless time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-\nto-German translation task, improving over the existing best results, including\nensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task,\nour model establishes a new single-model state-of-the-art BLEU score of 41.8 after\ntraining for 3.5 days on eight GPUs, a small fraction of the training costs of the\nbest models from the literature. We show that the Transformer generalizes well to\nother tasks by applying it successfully to English constituency parsing both with\nlarge and limited training data.",
+            "score": 0.029052,
+            "keyword_score": 2.9168
+          }
+        ],
+        "embedding_model": "e5-onnx-int8-v1",
+        "duration_ms": 1310,
+        "query_id": "9ef3a5bdaba84c6396a2c5d9865a509b"
+      }
+    },
+    {
+      "question": "论文使用了哪些数据集？",
+      "answer": {
+        "status": "answered",
+        "source": "local_model",
+        "citations": [
+          {
+            "chunk_id": "503d3f03902b47f59983c1e8685edf2f",
+            "paper_id": "f28c862a6c5849aeb0391a7eae90f0d0",
+            "page": 7,
+            "section": "5.1 Training Data and Batching",
+            "quote": "We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million\nsentence pairs.",
+            "bbox": [
+              107.53199768066406,
+              373.64630126953125,
+              505.654541015625,
+              449.1390686035156
+            ],
+            "page_url": "/api/papers/f28c862a6c5849aeb0391a7eae90f0d0/pages/7.png?chunk_id=503d3f03902b47f59983c1e8685edf2f",
+            "pdf_url": "/api/papers/f28c862a6c5849aeb0391a7eae90f0d0/file#page=7"
+          }
+        ],
+        "message": "本地模型选取原文证据，引用已通过文本及来源校验。内容是否充分回答问题仍需人工核对。",
+        "hits": [
+          {
+            "chunk_id": "503d3f03902b47f59983c1e8685edf2f",
+            "paper_id": "f28c862a6c5849aeb0391a7eae90f0d0",
+            "page": 7,
+            "section": "5.1 Training Data and Batching",
+            "bbox": [
+              107.53199768066406,
+              373.64630126953125,
+              505.654541015625,
+              449.1390686035156
+            ],
+            "text": "We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million\nsentence pairs. Sentences were encoded using byte-pair encoding [3], which has a shared source-\ntarget vocabulary of about 37000 tokens. For English-French, we used the significantly larger WMT\n2014 English-French dataset consisting of 36M sentences and split tokens into a 32000 word-piece\nvocabulary [38]. Sentence pairs were batched together by approximate sequence length. Each training\nbatch contained a set of sentence pairs containing approximately 25000 source tokens and 25000\ntarget tokens.",
+            "score": 0.016393,
+            "keyword_score": 3.0104
+          }
+        ],
+        "embedding_model": "e5-onnx-int8-v1",
+        "duration_ms": 1229,
+        "query_id": "3ea4b46e0ddb4319b13364aa6432e50c"
+      }
+    }
+  ]
+}
